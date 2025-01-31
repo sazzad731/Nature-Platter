@@ -4,19 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nature's Platter</title>
-    <!-- daisyui and tailwind css -->
+
+    <!-- daisyui and tailwind css fontawesome & google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/1ea26cc59f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
-          extend: {},
+          fontFamily: {
+            "sora": "Sora, serif",
+            "poppins": "Poppins, serif"
+          },
+          extend: {
+            colors: {
+              accent: "#179800",
+              bgsecondary: "#EFEBE3"
+            }
+          },
         },
       };
     </script>
   </head>
-  <body>
-    <header></header>
+  <body class="font-sora">
+    <header>
+      <section class="max-w-[99rem] mx-auto flex items-center justify-between py-6 xl:px-0 px-4">
+        <a href="#">
+          <img class="hidden lg:block" src="assets/logo-header.png" alt="logo">
+          <img class="lg:hidden" src="assets/logo.png" alt="logo">
+        </a>
+        <nav class="hidden lg:flex gap-28">
+          <ul class="flex items-center justify-between gap-8">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+          <div class="flex items-center gap-6">
+            <div class="space-x-6">
+              <button class=""><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+              <button class=""><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+            </div>
+            <div class="space-x-3">
+              <button class="btn btn-outline border-accent hover:bg-accent hover:border-accent">Login</button>
+              <button class="btn bg-accent hover:bg-accent text-white">Register</button>
+            </div>
+          </div>
+        </nav>
+        <button class="block lg:hidden"><i class="fa-solid fa-bars fa-xl"></i></button>
+      </section>
+    </header>
     <main></main>
     <footer></footer>
   </body>
